@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("$counter", style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),)
+              Text(counter.toString(), style: const TextStyle(fontSize: 50, fontWeight: FontWeight.bold),),
             ],
           ),
         ),
