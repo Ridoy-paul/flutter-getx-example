@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() => runApp(const MyApp());
 
@@ -23,7 +24,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int counter = 0;
+  RxInt counter = 0.obs;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,17 +39,14 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-
-              Text(counter.toString(), style: const TextStyle(fontSize: 50, fontWeight: FontWeight.bold),),
+              Obx(() => Text(counter.toString(), style: const TextStyle(fontSize: 50, fontWeight: FontWeight.bold),)),
             ],
           ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          setState(() {
-            counter++;
-          });
+          counter++;
         },
         child: const Icon(Icons.add),
       ),
