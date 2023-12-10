@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'counter_state_controller.dart';
-import 'main.dart';
+import 'home_screen.dart';
 
 class CounterAppWithGet extends StatelessWidget {
   const CounterAppWithGet({super.key});
