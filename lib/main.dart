@@ -23,7 +23,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  RxInt counter = 0.obs;
+  CounterStateController counterStateController = CounterStateController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -38,18 +39,33 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Obx(() => Text(counter.toString(), style: const TextStyle(fontSize: 50, fontWeight: FontWeight.bold),)),
+              Obx(() => Text(counterStateController.count.toString(), style: const TextStyle(fontSize: 50, fontWeight: FontWeight.bold),)),
             ],
           ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          counter++;
+          counterStateController.incrementCount(1);
         },
         child: const Icon(Icons.add),
       ),
     );
   }
 }
+
+class CounterStateController {
+  RxInt _count = 0.obs;
+
+  /// very Inportant get method.
+  RxInt get count {
+    return _count;
+  }
+
+  void incrementCount(int value) {
+    _count += value;
+  }
+
+}
+
 
