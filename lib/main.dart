@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'counter_state_controller.dart';
 
 void main() => runApp(const MyApp());
 
@@ -54,18 +55,6 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-class CounterStateController {
-  RxInt _count = 0.obs;
 
-  /// very Inportant get method.
-  RxInt get count {
-    return _count;
-  }
-
-  void incrementCount(int value) {
-    _count += value;
-  }
-
-}
 
 
