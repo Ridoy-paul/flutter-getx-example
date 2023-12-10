@@ -1,31 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'counter_app.dart';
 import 'counter_state_controller.dart';
 
-void main() => runApp(const MyApp());
-
-/// This is the Getx dependency binder.
-class GetDependencyBinder extends Bindings {
-  /// Get dependency manager.
-  @override
-  void dependencies() {
-    Get.put(CounterStateController());
-  }
-
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return  GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
-      initialBinding: GetDependencyBinder(),
-    );
-  }
-}
+void main() => runApp(const CounterAppWithGet());
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
