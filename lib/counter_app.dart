@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'counter_state_controller.dart';
-import 'home_screen.dart';
+import 'screen/home_screen.dart';
 
 class CounterAppWithGet extends StatelessWidget {
   const CounterAppWithGet({super.key});
@@ -23,5 +23,4 @@ class GetDependencyBinder extends Bindings {
   void dependencies() {
     Get.put(CounterStateController());
   }
-
 }

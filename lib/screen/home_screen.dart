@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'second_screen.dart';
 import 'package:get/get.dart';
-import 'counter_state_controller.dart';
+import '../counter_state_controller.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -32,6 +33,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: const TextStyle(
                           fontSize: 50, fontWeight: FontWeight.bold, color: Colors.deepOrange ));
                 },
+              ),
+              const SizedBox(height: 10,),
+              ElevatedButton(
+                onPressed: () {
+                  Get.to(const SecondScreen());
+                },
+                child: const Text("Go To Second Screen"),
               ),
             ],
           ),
