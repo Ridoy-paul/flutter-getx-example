@@ -24,8 +24,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  CounterStateController counterStateController = CounterStateController();
-
+  CounterStateController counterStateController = Get.put(CounterStateController());
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +39,14 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Obx(() => Text(counterStateController.count.toString(), style: const TextStyle(fontSize: 50, fontWeight: FontWeight.bold),)),
+              GetBuilder<CounterStateController>(
+                assignId: true,
+                builder: (controller) {
+                  return Text(controller.count.toString(),
+                    style: const TextStyle(
+                        fontSize: 50, fontWeight: FontWeight.bold),);
+                },
+              ),
             ],
           ),
         ),
