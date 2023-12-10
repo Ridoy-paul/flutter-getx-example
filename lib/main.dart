@@ -5,7 +5,7 @@ import 'counter_state_controller.dart';
 void main() => runApp(const MyApp());
 
 /// This is the Getx dependency binder.
-class GetxDependencyBinder extends Bindings {
+class GetDependencyBinder extends Bindings {
   /// Get dependency manager.
   @override
   void dependencies() {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
     return  GetMaterialApp(
       debugShowCheckedModeBanner: false,
       home: const HomeScreen(),
-      initialBinding: GetxDependencyBinder(),
+      initialBinding: GetDependencyBinder(),
     );
   }
 }
@@ -41,8 +41,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Flutter Getx Example"),
-        backgroundColor: Colors.indigo,
+        title: const Text("Flutter Get dependency binder"),
+        backgroundColor: Colors.deepOrange,
       ),
       body: SafeArea(
         child: Center(
@@ -55,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 builder: (controller) {
                   return Text(controller.count.toString(),
                     style: const TextStyle(
-                        fontSize: 50, fontWeight: FontWeight.bold),);
+                        fontSize: 50, fontWeight: FontWeight.bold, color: Colors.deepOrange ));
                 },
               ),
             ],
