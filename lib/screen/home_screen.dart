@@ -16,6 +16,9 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text("Flutter Get Light & Dark Theme", style: TextStyle(color: Colors.white),),
         backgroundColor: Colors.blueAccent,
+        actions: [
+          IconButton(onPressed: () {}, icon: const Icon(Icons.light_mode, color: Colors.white,),)
+        ],
       ),
       body: const SafeArea(
         child: Center(
