@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
+import '../controller/theme_controller.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -10,6 +10,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final themeController = Get.find<ThemeController>();
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +18,11 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text("Flutter Get Light & Dark Theme"),
         actions: [
-          IconButton(onPressed: () {
-            Get.changeTheme(Get.isDarkMode? ThemeData.light() : ThemeData.dark());
-          }, icon: const Icon(Icons.light_mode),)
+          GetBuilder<ThemeController>(builder: (controller) {
+            return IconButton(onPressed: () {
+              controller.toggleTheme();
+            }, icon: controller.isDarkMode ? const Icon(Icons.light_mode) : const Icon(Icons.nightlight_outlined),);
+          })
         ],
       ),
       body: const SafeArea(
@@ -31,9 +34,9 @@ class _HomeScreenState extends State<HomeScreen> {
               Text(
                 "Light Theme",
                 style: TextStyle(
-                    fontSize: 50,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.deepOrange,
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.deepOrange,
                 ),
               ),
               SizedBox(height: 10,),
