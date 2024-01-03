@@ -22,24 +22,20 @@ class _HomeScreenState extends State<HomeScreen> {
             return IconButton(onPressed: () {
               controller.toggleTheme();
             }, icon: controller.isDarkMode ? const Icon(Icons.light_mode) : const Icon(Icons.nightlight_outlined),);
-          })
+          }),
         ],
       ),
-      body: const SafeArea(
+      body: SafeArea(
         child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Light Theme",
-                style: TextStyle(
-                  fontSize: 50,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.deepOrange,
-                ),
+                themeController.isDarkMode ? "Dark Mode" : "Light Mode",
+                style: Theme.of(context).textTheme.headlineLarge,
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
             ],
           ),
         ),
