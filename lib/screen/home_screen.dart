@@ -17,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text("Flutter Get Light & Dark Theme"),
         actions: [
           IconButton(onPressed: () {
-            Get.changeTheme(ThemeData.dark());
+            Get.changeTheme(Get.isDarkMode? ThemeData.light() : ThemeData.dark());
           }, icon: const Icon(Icons.light_mode, color: Colors.white,),)
         ],
       ),

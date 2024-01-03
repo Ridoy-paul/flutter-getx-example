@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'screen/home_screen.dart';
 
@@ -11,6 +11,9 @@ class CounterAppWithGet extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const HomeScreen(),
       initialBinding: GetDependencyBinder(),
+      theme: ThemeData(
+        brightness: Get.isDarkMode? Brightness.dark : Brightness.light,
+      ),
     );
   }
 }
