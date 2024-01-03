@@ -14,10 +14,11 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Flutter Get Light & Dark Theme", style: TextStyle(color: Colors.white),),
-        backgroundColor: Colors.blueAccent,
+        title: const Text("Flutter Get Light & Dark Theme"),
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.light_mode, color: Colors.white,),)
+          IconButton(onPressed: () {
+            Get.changeTheme(ThemeData.dark());
+          }, icon: const Icon(Icons.light_mode, color: Colors.white,),)
         ],
       ),
       body: const SafeArea(
