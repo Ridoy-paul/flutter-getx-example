@@ -19,6 +19,7 @@ class ThemeController extends GetxController {
   void toggleTheme() {
     _isDarkMode = !_isDarkMode;
     _box.write(_key, _isDarkMode);
+    /// Change theme mode and then update
     _isDarkMode ? Get.changeTheme(ThemeData.dark()) : Get.changeTheme(ThemeData.light());
     update();
   }

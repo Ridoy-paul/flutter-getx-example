@@ -17,6 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Flutter Get Light & Dark Theme"),
+        backgroundColor: Theme.of(context).primaryColor,
         actions: [
           GetBuilder<ThemeController>(builder: (controller) {
             return IconButton(onPressed: () {

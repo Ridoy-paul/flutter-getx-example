@@ -15,7 +15,7 @@ class CounterAppWithGet extends StatelessWidget {
       initialBinding: GetDependencyBinder(),
       theme: themeController.isDarkMode? darkTheme : lightTheme,
       themeMode: ThemeMode.system,
-      home: const HomeScreen(),
+      home: HomeScreen(),
     );
   }
 }
