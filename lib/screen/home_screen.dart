@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'second_screen.dart';
 import 'package:get/get.dart';
-import '../counter_state_controller.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -11,45 +9,32 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  CounterStateController counterStateController = Get.find<CounterStateController>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Flutter Get dependency binder"),
-        backgroundColor: Colors.deepOrange,
+        title: const Text("Flutter Get Light & Dark Theme", style: TextStyle(color: Colors.white),),
+        backgroundColor: Colors.blueAccent,
       ),
-      body: SafeArea(
+      body: const SafeArea(
         child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GetBuilder<CounterStateController>(
-                assignId: true,
-                builder: (controller) {
-                  return Text(controller.count.toString(),
-                      style: const TextStyle(
-                          fontSize: 50, fontWeight: FontWeight.bold, color: Colors.deepOrange ));
-                },
+              Text(
+                "Light Theme",
+                style: TextStyle(
+                    fontSize: 50,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.deepOrange,
+                ),
               ),
-              const SizedBox(height: 10,),
-              ElevatedButton(
-                onPressed: () {
-                  Get.to(const SecondScreen());
-                },
-                child: const Text("Go To Second Screen"),
-              ),
+              SizedBox(height: 10,),
             ],
           ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          counterStateController.incrementCount(1);
-        },
-        child: const Icon(Icons.add),
       ),
     );
   }
