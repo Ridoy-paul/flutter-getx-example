@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -18,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           IconButton(onPressed: () {
             Get.changeTheme(Get.isDarkMode? ThemeData.light() : ThemeData.dark());
-          }, icon: const Icon(Icons.light_mode, color: Colors.white,),)
+          }, icon: const Icon(Icons.light_mode),)
         ],
       ),
       body: const SafeArea(
