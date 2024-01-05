@@ -25,7 +25,14 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-
+              ElevatedButton(
+                onPressed: () {
+                  Get.defaultDialog(
+                    title: "Delete",
+                  );
+                },
+                child: const Text("Click to open Dialog"),
+              ),
             ],
           ),
         ),
