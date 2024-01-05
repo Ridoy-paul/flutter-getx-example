@@ -16,15 +16,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Flutter Get Light & Dark Theme"),
-        backgroundColor: Theme.of(context).primaryColor,
-        actions: [
-          GetBuilder<ThemeController>(builder: (controller) {
-            return IconButton(onPressed: () {
-              controller.toggleTheme();
-            }, icon: controller.isDarkMode ? const Icon(Icons.light_mode) : const Icon(Icons.nightlight_outlined),);
-          }),
-        ],
+        title: const Text("Flutter Dialog Popup"),
+        backgroundColor: Colors.deepOrange,
       ),
       body: SafeArea(
         child: Center(
@@ -32,11 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                themeController.isDarkMode ? "Dark Mode" : "Light Mode",
-                style: Theme.of(context).textTheme.headlineLarge,
-              ),
-              const SizedBox(height: 10,),
+
             ],
           ),
         ),

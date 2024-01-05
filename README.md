@@ -1,5 +1,3 @@
-# Flutter Getx Light & Dark Theme Change with Get Storage.
+# Flutter Getx Dialog Popup Example
 ![output](assets/images/light-mode.png)
-![output](assets/images/dark-mode.png)
-
 
