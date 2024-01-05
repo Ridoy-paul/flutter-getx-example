@@ -29,6 +29,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 onPressed: () {
                   Get.defaultDialog(
                     title: "Delete",
+                    contentPadding: const EdgeInsets.all(10),
+                    middleText: "Are you want to delete?",
+                    textConfirm: "Yes",
+                    textCancel: "No",
+                    onConfirm: () {
+                      print("Confirm Clicked");
+                    }
                   );
                 },
                 child: const Text("Click to open Dialog"),
