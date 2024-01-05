@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Flutter Dialog Popup"),
+        title: const Text("Flutter Dialog Popup", style: TextStyle(color: Colors.white),),
         backgroundColor: Colors.deepOrange,
       ),
       body: SafeArea(
