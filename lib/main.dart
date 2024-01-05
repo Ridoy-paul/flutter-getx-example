@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'light_and_dark_theme_app.dart';
+import 'app.dart';
 import 'package:get_storage/get_storage.dart';
 
 
