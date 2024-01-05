@@ -1,2 +1,2 @@
-# Flutter Getx Dialog Popup Example
+# Flutter Getx Bottomsheet
 ![output](assets/images/output.png)
