@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ScreenOne extends StatefulWidget {
   const ScreenOne({super.key});
@@ -14,9 +15,21 @@ class _ScreenOneState extends State<ScreenOne> {
       appBar: AppBar(
         title: const Text("Screen One"),
       ),
-      body: const  SafeArea(
+      body: SafeArea(
         child: Center(
-          child: Text("This is Screen One!"),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("This is Screen One!", style: Theme.of(context).textTheme.titleLarge,),
+              const SizedBox(height: 10,),
+              ElevatedButton(
+                onPressed: () {
+                  Get.back();
+                },
+                child: const Text("Go Back"),
+              ),
+            ],
+          ),
         ),
       ),
     );
