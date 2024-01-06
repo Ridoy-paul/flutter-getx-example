@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Flutter BottomSheet", style: TextStyle(color: Colors.white),),
+        title: const Text("Flutter Getx Route", style: TextStyle(color: Colors.white),),
         backgroundColor: Colors.deepOrange,
       ),
       body: SafeArea(
@@ -26,27 +26,17 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               ElevatedButton(
                 onPressed: () {
-                  Get.bottomSheet(
-                    backgroundColor: Colors.white,
-                    shape: const RoundedRectangleBorder(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(20),
-                        topRight: Radius.circular(20),
-                      ),
-                    ),
-                    Container(
-                      width: double.infinity,
-                      padding: const EdgeInsets.all(20),
-                      child: const Column(
-                        children: [
-                          Text("This is the bottomSheet")
-                        ],
-                      ),
-                    ),
-                  );
+
                 },
-                child: const Text("Click to open BottomSheet"),
+                child: const Text("Go To Page 1"),
               ),
+              ElevatedButton(
+                onPressed: () {
+
+                },
+                child: const Text("Go To Page 1"),
+              ),
+
             ],
           ),
         ),

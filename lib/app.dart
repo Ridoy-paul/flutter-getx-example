@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_getx_example/themes.dart';
 import 'package:get/get.dart';
 import 'screen/home_screen.dart';
 
