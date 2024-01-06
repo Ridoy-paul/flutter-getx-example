@@ -30,6 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 onPressed: () {
                   //Get.to(const ScreenOne());
                   Get.toNamed('/screenOne');
+                  
                 },
                 child: const Text("Go To Screen One"),
               ),
