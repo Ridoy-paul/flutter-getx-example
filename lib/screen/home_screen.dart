@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_example/screen/screen_two.dart';
 import 'screen_one.dart';
 import 'package:get/get.dart';
 
@@ -26,15 +27,16 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               ElevatedButton(
                 onPressed: () {
-                  Get.to(const ScreenOne());
+                  //Get.to(const ScreenOne());
+                  Get.toNamed('/screenOne');
                 },
                 child: const Text("Go To Screen One"),
               ),
               ElevatedButton(
                 onPressed: () {
-
+                  Get.to(const ScreenTwo());
                 },
-                child: const Text("Go To Page 1"),
+                child: const Text("Go To Screen Two"),
               ),
 
             ],
