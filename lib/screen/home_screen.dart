@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_example/screen/screen_one.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -9,7 +10,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +26,9 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               ElevatedButton(
                 onPressed: () {
-
+                  Get.to(const ScreenOne());
                 },
-                child: const Text("Go To Page 1"),
+                child: const Text("Go To Screen One"),
               ),
               ElevatedButton(
                 onPressed: () {
