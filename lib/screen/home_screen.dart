@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_getx_example/screen/screen_one.dart';
+import 'screen_one.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
