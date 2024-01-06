@@ -17,8 +17,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Flutter Getx Route", style: TextStyle(color: Colors.white),),
-        backgroundColor: Colors.deepOrange,
+        title: const Text("Flutter Getx Height & Width", style: TextStyle(color: Colors.white),),
+        backgroundColor: Colors.deepPurple,
       ),
       body: SafeArea(
         child: Center(
@@ -30,7 +30,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 onPressed: () {
                   //Get.to(const ScreenOne());
                   Get.toNamed('/screenOne');
-                  
                 },
                 child: const Text("Go To Screen One"),
               ),
