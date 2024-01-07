@@ -11,40 +11,43 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Flutter Getx Height & Width", style: TextStyle(color: Colors.white),),
+        title: const Text(
+          "Flutter Getx Height & Width",
+          style: TextStyle(color: Colors.white),
+        ),
         backgroundColor: Colors.deepPurple,
       ),
       body: SafeArea(
-        child: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                onPressed: () {
-                  //Get.to(const ScreenOne());
-                  Get.toNamed('/screenOne');
-                },
-                child: const Text("Go To Screen One"),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  Get.to(const ScreenTwo());
-                },
-                child: const Text("Go To Screen Two"),
-              ),
-
-            ],
+        child: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              children: [
+                const SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  height: Get.height * .1,
+                  width: Get.width * .8,
+                  decoration: BoxDecoration(
+                    color: Colors.deepOrange,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Center(
+                    child: Text("Get.width * 0.8 X Get.height * 0.2", style: TextStyle(color: Colors.white, fontSize: 20),),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 }
-
