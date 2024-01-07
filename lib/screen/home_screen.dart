@@ -14,10 +14,10 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Flutter Getx Localization",
+          "Flutter Get Localization",
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.black54,
         actions: [
           TextButton(
             onPressed: () {},
@@ -33,21 +33,10 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Center(
             child: Column(
               children: [
-                const SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  height: Get.height * .1,
-                  width: Get.width * .8,
-                  decoration: BoxDecoration(
-                    color: Colors.deepOrange,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: const Center(
-                    child: Text("Get.width * 0.8 X Get.height * 0.1", style: TextStyle(color: Colors.white, fontSize: 20),),
-                  ),
-                ),
-
+                ListTile(
+                  title: Text('title'.tr, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),),
+                  subtitle: Text('about'.tr),
+                )
 
 
               ],
