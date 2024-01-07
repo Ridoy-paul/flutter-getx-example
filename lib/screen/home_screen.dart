@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Flutter Getx Height & Width",
+          "Flutter Getx Localization",
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.deepPurple,
