@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_getx_example/languages.dart';
+import 'languages.dart';
 import 'package:get/get.dart';
 import 'screen/home_screen.dart';
 

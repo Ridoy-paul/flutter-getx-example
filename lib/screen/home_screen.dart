@@ -39,7 +39,6 @@ class _HomeScreenState extends State<HomeScreen> {
               style: TextStyle(color: Colors.white),
             ),
           ),
-
         ],
       ),
       body: SafeArea(
@@ -51,8 +50,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   title: Text('title'.tr, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),),
                   subtitle: Text('about'.tr, textAlign: TextAlign.justify,),
                 ),
-
-
               ],
             ),
           ),

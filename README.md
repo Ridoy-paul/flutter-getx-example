@@ -1,2 +1,3 @@
-# Flutter Getx Height & Width
-![output](assets/images/output.png)
+# Flutter Getx Localization
+![output](assets/images/ouput-en.png)
+![output](assets/images/output-bn.png)
