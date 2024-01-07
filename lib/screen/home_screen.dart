@@ -37,12 +37,42 @@ class _HomeScreenState extends State<HomeScreen> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: const Center(
-                    child: Text("Get.width * 0.8 X Get.height * 0.2", style: TextStyle(color: Colors.white, fontSize: 20),),
+                    child: Text("Get.width * 0.8 X Get.height * 0.1", style: TextStyle(color: Colors.white, fontSize: 20),),
                   ),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
+                Container(
+                  height: Get.height * .2,
+                  width: Get.width * .9,
+                  decoration: BoxDecoration(
+                    color: Colors.deepOrange,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Center(
+                    child: Text("Get.width * 0.9 X Get.height * 0.2", style: TextStyle(color: Colors.white, fontSize: 20),),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  height: Get.height * .25,
+                  width: Get.width * .9,
+                  decoration: BoxDecoration(
+                    color: Colors.deepOrange,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Center(
+                    child: Text("Get.width * 0.9 X Get.height * 0.25", style: TextStyle(color: Colors.white, fontSize: 20),),
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+
+
               ],
             ),
           ),
