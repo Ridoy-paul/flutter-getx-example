@@ -10,8 +10,8 @@ class CounterAppWithGet extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      locale: const Locale('en', 'US'),
       translations: Languages(),
+      locale: const Locale('en', 'US'),
       fallbackLocale: const Locale('en', 'US'),
       home: const HomeScreen(),
       getPages: [

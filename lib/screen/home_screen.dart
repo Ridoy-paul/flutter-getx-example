@@ -9,6 +9,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  Locale? currentLocale = Get.locale;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,12 +22,24 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.black54,
         actions: [
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.updateLocale(const Locale('bn', 'BD'));
+            },
             child: const Text(
               "বাংলা",
               style: TextStyle(color: Colors.white),
             ),
           ),
+          TextButton(
+            onPressed: () {
+              Get.updateLocale(const Locale('en', 'US'));
+            },
+            child: const Text(
+              "EN",
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+
         ],
       ),
       body: SafeArea(
