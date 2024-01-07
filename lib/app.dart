@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'screen/screen_one.dart';
-import 'screen/screen_two.dart';
 import 'package:get/get.dart';
 import 'screen/home_screen.dart';
 
@@ -14,9 +12,6 @@ class CounterAppWithGet extends StatelessWidget {
       home: const HomeScreen(),
       getPages: [
         GetPage(name: '/', page: ()=> const HomeScreen()),
-        GetPage(name: '/screenOne', page: ()=> const ScreenOne()),
-        GetPage(name: '/screenTwo', page: ()=> const ScreenTwo()),
-
       ],
 
     );
