@@ -23,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           TextButton(
             onPressed: () {
+
               Get.updateLocale(const Locale('bn', 'BD'));
             },
             child: const Text(
